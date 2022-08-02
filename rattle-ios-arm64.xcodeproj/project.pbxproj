@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52AFB9B42899D42700647B78 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 52AFB9B32899D42700647B78 /* main.c */; };
+		52F609BD2899D4A600B59F2F /* rattle-trial-only.c in Sources */ = {isa = PBXBuildFile; fileRef = 52F609BC2899D4A600B59F2F /* rattle-trial-only.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,8 @@
 
 /* Begin PBXFileReference section */
 		52AFB9B02899D42700647B78 /* rattle-ios-arm64 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "rattle-ios-arm64"; sourceTree = BUILT_PRODUCTS_DIR; };
-		52AFB9B32899D42700647B78 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		52F609BC2899D4A600B59F2F /* rattle-trial-only.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "rattle-trial-only.c"; sourceTree = "<group>"; };
+		52F609BE2899D4C100B59F2F /* rattle-ios-arm64.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "rattle-ios-arm64.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +58,8 @@
 		52AFB9B22899D42700647B78 /* rattle-ios-arm64 */ = {
 			isa = PBXGroup;
 			children = (
-				52AFB9B32899D42700647B78 /* main.c */,
+				52F609BE2899D4C100B59F2F /* rattle-ios-arm64.entitlements */,
+				52F609BC2899D4A600B59F2F /* rattle-trial-only.c */,
 			);
 			path = "rattle-ios-arm64";
 			sourceTree = "<group>";
@@ -119,7 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52AFB9B42899D42700647B78 /* main.c in Sources */,
+				52F609BD2899D4A600B59F2F /* rattle-trial-only.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,16 +240,36 @@
 		52AFB9B82899D42700647B78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
+				CODE_SIGN_ENTITLEMENTS = "rattle-ios-arm64/rattle-ios-arm64.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HM99BDJH3;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		52AFB9B92899D42700647B78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
+				CODE_SIGN_ENTITLEMENTS = "rattle-ios-arm64/rattle-ios-arm64.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HM99BDJH3;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};

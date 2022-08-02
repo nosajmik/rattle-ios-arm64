@@ -1,0 +1,2 @@
+Target dependency graph (1 target)
+rattle-ios-arm64 in rattle-ios-arm64, no dependencies
